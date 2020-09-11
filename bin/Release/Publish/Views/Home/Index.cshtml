@@ -1,0 +1,18 @@
+﻿<div id="body">
+    <ul id="mssqls"></ul>
+</div>
+
+@section scripts{
+<script type="text/javascript">
+
+    $(function () {
+        $.getJSON('/api/mssql', function (mssqlsJsonPayLoad) {
+            $(mssqlsJsonPayLoad).each(function (i, item) {
+                $('#mssqls').append('<li>' + hey + '</li>');
+            });
+        });
+    });
+
+
+</script>
+}
